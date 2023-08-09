@@ -17,7 +17,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7"
+        kotlinCompilerExtensionVersion = Versions.compose_compiler_version
     }
     packaging {
         resources {
@@ -40,6 +40,9 @@ android {
 
 dependencies {
     implementation(project(":shared"))
+    with(Deps){
+        implementation(Deps.napier)
+    }
 
     with(Deps.Compose){
         implementation(ui)

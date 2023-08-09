@@ -16,7 +16,7 @@ object  Versions {
     const val compile_sdk = 33
 
     // 2 Plugins
-    const val compose_compiler_version = "1.4.3"
+    const val compose_compiler_version = "1.4.7"
     const val compose_version = "1.4.3"
     const val compose_activity_version = "1.7.1"
     const val desktop_compose_plugin = "1.0.1"
@@ -27,7 +27,7 @@ object  Versions {
     const val junit = "4.13.2"
     const val kotlinxDateTime = "0.3.1"
     const val junit5 = "1.5.10"
-    const val coroutines = "1.6.0-native-mt"
+    const val coroutines = "1.7.3"
 
 }
 

@@ -38,6 +38,8 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 //put your multiplatform dependencies here
+                implementation(Deps.JetBrains.datetime)
+                implementation(Deps.napier)
             }
         }
         val commonTest by getting {
