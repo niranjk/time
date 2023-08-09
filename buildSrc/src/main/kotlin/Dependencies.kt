@@ -23,9 +23,9 @@ object  Versions {
 
     // coroutines, junit
     // multiplatform loggin library
-    const val napier = "2.1.0"
+    const val napier = "2.6.1"
     const val junit = "4.13.2"
-    const val kotlinxDateTime = "0.3.1"
+    const val kotlinxDateTime = "0.4.0"
     const val junit5 = "1.5.10"
     const val coroutines = "1.7.3"
 
