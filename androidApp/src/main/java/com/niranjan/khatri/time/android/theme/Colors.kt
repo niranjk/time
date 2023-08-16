@@ -2,12 +2,12 @@ package com.niranjan.khatri.time.android.theme
 
 import androidx.compose.ui.graphics.Color
 
-val primaryColor = Color(0xFF1e88e5)
-val primaryLightColor = Color(0xFF6ab7ff)
-val primaryDarkColor = Color(0xFF005cb2)
-val secondaryColor = Color(0xFF26a69a)
-val secondaryLightColor = Color(0xFF64d8cb)
-val secondaryDarkColor = Color(0xFF00766c)
+val primaryColor = Color(0xFFDE85B1)
+val primaryLightColor = Color(0xFFCD6889)
+val primaryDarkColor = Color(0xFFD6C537)
+val secondaryColor = Color(0xFFD9D919)
+val secondaryLightColor = Color(0xFFDCA2CD)
+val secondaryDarkColor = Color(0xFFDE85B1)
 val primaryTextColor = Color(0xFF000000)
 val secondaryTextColor = Color(0xFF000000)
 val lightGrey = Color(0xFFA2B4B5)

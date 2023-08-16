@@ -37,14 +37,14 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import com.niranjan.khatri.time.TimeZoneHelper
-import com.niranjan.khatri.time.TimeZoneHelperImpl
+import com.niranjan.khatri.time.TimeHelper
+import com.niranjan.khatri.time.TimeHelperImpl
 import com.niranjan.khatri.time.android.R
 import kotlinx.coroutines.launch
 
 @Composable
 fun AddTimeZoneDialog(
-    timezoneHelper: TimeZoneHelper = TimeZoneHelperImpl(),
+    timezoneHelper: TimeHelper = TimeHelperImpl(),
     onAdd: (List<String>) -> Unit,
     onDismiss: () -> Unit
 ) = Dialog(

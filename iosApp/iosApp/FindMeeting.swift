@@ -53,7 +53,7 @@ struct FindMeeting: View {
                                     showHoursDialog = true
                                 }, label: {
                                     Text("Search")
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(Color.blue)
                                 })
                                 Spacer()
                                     .frame(height: 8)

@@ -1,6 +1,6 @@
 package com.niranjan.khatri.time
 
-interface TimeZoneHelper {
+interface TimeHelper {
     fun getTimeZoneStrings(): List<String>
     fun currentTime(): String
     fun currentTimeZone(): String

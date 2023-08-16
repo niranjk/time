@@ -5,7 +5,7 @@ struct TimeApp: App {
     init() {
             let tabBarItemAppearance = UITabBarItemAppearance()
             tabBarItemAppearance.configureWithDefault(for: .stacked)
-            tabBarItemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.black]
+            tabBarItemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.systemBlue]
             tabBarItemAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.white]
             tabBarItemAppearance.normal.iconColor = .black
             tabBarItemAppearance.selected.iconColor = .white

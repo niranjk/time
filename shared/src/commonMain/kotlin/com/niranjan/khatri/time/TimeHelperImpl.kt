@@ -11,7 +11,7 @@ import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 
-class TimeZoneHelperImpl : TimeZoneHelper {
+class TimeHelperImpl : TimeHelper {
     override fun getTimeZoneStrings(): List<String> {
         return TimeZone.availableZoneIds.sorted()
     }

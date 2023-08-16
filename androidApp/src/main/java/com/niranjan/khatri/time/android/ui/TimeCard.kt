@@ -51,7 +51,7 @@ fun TimeCard(
                     ) {
                         Text(text = timezone,
                             style = TextStyle(
-                                color = Color.Black,
+                                color = Color.Blue,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 20.sp
                             )
@@ -60,14 +60,14 @@ fun TimeCard(
                         Row {
                             Text(text = hours.toString(),
                                 style = TextStyle(
-                                    color = Color.Black,
+                                    color = Color.Blue,
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 14.sp
                                 )
                             )
                             Text(text = " hours from local",
                                 style = TextStyle(
-                                    color = Color.Black,
+                                    color = Color.Blue,
                                     fontSize = 14.sp
                                 )
                             )
@@ -79,7 +79,7 @@ fun TimeCard(
                     ) {
                         Text(text = time,
                             style = TextStyle(
-                                color = Color.Black,
+                                color = Color.Blue,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 24.sp
                             )
@@ -87,7 +87,7 @@ fun TimeCard(
                         Spacer(modifier = Modifier.weight(1.0f))
                         Text(text = date,
                             style = TextStyle(
-                                color = Color.Black,
+                                color = Color.Blue,
                                 fontSize = 12.sp
                             )
                         )

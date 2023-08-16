@@ -24,8 +24,8 @@ import androidx.compose.runtime.snapshots.SnapshotStateMap
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.niranjan.khatri.time.TimeZoneHelper
-import com.niranjan.khatri.time.TimeZoneHelperImpl
+import com.niranjan.khatri.time.TimeHelper
+import com.niranjan.khatri.time.TimeHelperImpl
 
 @Composable
 fun FindMeetingScreen(
@@ -43,7 +43,7 @@ fun FindMeetingScreen(
         for (i in 0..timezoneStrings.size -1) selected[i] = true
         selected
     }
-    val timeZoneHelper: TimeZoneHelper = TimeZoneHelperImpl()
+    val timeHelper: TimeHelper = TimeHelperImpl()
     val showMeetingDialog = remember {
         mutableStateOf(false)
     }
@@ -128,7 +128,7 @@ fun FindMeetingScreen(
             OutlinedButton(onClick = {
                 meetingHours.clear()
                 meetingHours.addAll(
-                    timeZoneHelper.search(startTime.value, endTime.value,
+                    timeHelper.search(startTime.value, endTime.value,
                         getSelectedTimeZones(timezoneStrings, selectedTimeZones)
                     )
                 )

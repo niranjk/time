@@ -25,15 +25,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.niranjan.khatri.time.TimeZoneHelper
-import com.niranjan.khatri.time.TimeZoneHelperImpl
+import com.niranjan.khatri.time.TimeHelper
+import com.niranjan.khatri.time.TimeHelperImpl
 import kotlinx.coroutines.delay
 
 @Composable
 fun TimeZoneScreen(
     currentTimezoneStrings: SnapshotStateList<String>
 ){
-    val timezoneHelper : TimeZoneHelper = TimeZoneHelperImpl()
+    val timezoneHelper : TimeHelper = TimeHelperImpl()
     val listState = rememberLazyListState()
     Column(
         modifier = Modifier.fillMaxSize()

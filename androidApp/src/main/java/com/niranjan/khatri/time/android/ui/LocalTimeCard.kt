@@ -6,9 +6,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Text
@@ -26,13 +28,13 @@ import com.niranjan.khatri.time.android.theme.typography
 fun LocalTimeCard(city: String, time: String, date: String){
     Box(modifier = Modifier
         .fillMaxWidth()
-        .height(140.dp)
+        .height(100.dp)
         .background(Color.White)
         .padding(8.dp)){
         Card(
-            shape = RoundedCornerShape(8.dp),
-            border = BorderStroke(1.dp, Color.Black),
-            elevation = 4.dp,
+            shape = RoundedCornerShape(16.dp),
+            border = BorderStroke(4.dp, Color.DarkGray),
+            elevation = 6.dp,
             modifier = Modifier.fillMaxWidth()
         ) {
             // add body
@@ -52,7 +54,7 @@ fun LocalTimeCard(city: String, time: String, date: String){
                         horizontalAlignment = Alignment.Start
                     ) {
                         Spacer(modifier = Modifier.weight(1.0f))
-                        Text(text = "Your Location", style = typography.h4)
+                        Text(text = "Location", style = typography.h4)
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(text = city, style = typography.h2)
                         Spacer(modifier = Modifier.height(8.dp))
@@ -64,7 +66,7 @@ fun LocalTimeCard(city: String, time: String, date: String){
                         Spacer(modifier = Modifier.weight(1.0f))
                         Text(text = time, style = typography.h1)
                         Spacer(modifier = Modifier.height(8.dp))
-                        Text(text = date, style = typography.h3)
+                        Text(text = date, style = typography.h4)
                         Spacer(modifier = Modifier.height(8.dp))
                     }
                 }
