@@ -12,7 +12,7 @@ import shared
 
 struct FindMeeting: View {
     @EnvironmentObject private var timezoneItems: TimezoneItems
-        private let timezoneHelper = TimeZoneHelperImpl()
+        private let timezoneHelper = TimeHelperImpl()
         @State private var meetingHours: [Int] = []
         @State private var showHoursDialog = false
         @State private var startDate = Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: Date())!

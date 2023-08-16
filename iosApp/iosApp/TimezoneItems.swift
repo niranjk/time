@@ -13,6 +13,6 @@ class TimezoneItems : ObservableObject{
     @Published var selectedTimezones = Set<String>()
     
     init(){
-        self.timezones = TimeZoneHelperImpl().getTimeZoneStrings()
+        self.timezones = TimeHelperImpl().getTimeZoneStrings()
     }
 }

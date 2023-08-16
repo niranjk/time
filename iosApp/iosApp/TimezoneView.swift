@@ -12,7 +12,7 @@ import shared
 
 struct TimezoneView: View {
     @EnvironmentObject private var timezoneItems : TimezoneItems
-    private var timezoneHelper = TimeZoneHelperImpl()
+    private var timezoneHelper = TimeHelperImpl()
     @State private var currentDate = Date()
     let timer = Timer.publish(every: 1000, on: .main, in: .common).autoconnect()
     @State private var showTimezoneDialog = false
