@@ -27,3 +27,10 @@ struct TimeApp: App {
 		}
 	}
 }
+
+/**
+ 3 important commands in iOS
+ 1. Command + B -> to build your application
+ 2. Command + R -> to run your applicaiton
+ 3. Command + N -> to create a new file
+ */
