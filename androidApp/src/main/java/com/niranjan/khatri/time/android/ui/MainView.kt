@@ -1,5 +1,6 @@
 package com.niranjan.khatri.time.android.ui
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
@@ -84,25 +85,27 @@ fun MainView(actionBarFun: topBarFun = { EmptyComposable() }) {
             }
         ) {
             // add our dialogs
-            if (showAddDialog.value){
-                AddTimeZoneDialog(
-                    onAdd = {newTimezones ->
-                        showAddDialog.value = false
-                        for (zone in newTimezones){
-                            if (!currentTimezoneStrings.contains(zone)){
-                                currentTimezoneStrings.add(zone)
+            Box(modifier = Modifier.padding(it)) {
+                if (showAddDialog.value) {
+                    AddTimeZoneDialog(
+                        onAdd = { newTimezones ->
+                            showAddDialog.value = false
+                            for (zone in newTimezones) {
+                                if (!currentTimezoneStrings.contains(zone)) {
+                                    currentTimezoneStrings.add(zone)
+                                }
                             }
+                        },
+                        onDismiss = {
+                            showAddDialog.value = false
                         }
-                    },
-                    onDismiss = {
-                        showAddDialog.value = false
-                    }
-                )
-            }
-            // add our screens
-            when(selectedIndex.value){
-                0 -> TimeZoneScreen(currentTimezoneStrings = currentTimezoneStrings)
-                1 -> FindMeetingScreen(timezoneStrings = currentTimezoneStrings)
+                    )
+                }
+                // add our screens
+                when (selectedIndex.value) {
+                    0 -> TimeZoneScreen(currentTimezoneStrings = currentTimezoneStrings)
+                    1 -> FindMeetingScreen(timezoneStrings = currentTimezoneStrings)
+                }
             }
         }
     }
