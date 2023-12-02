@@ -23,7 +23,8 @@ struct TimeApp: App {
     
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			// ContentView()
+            PlatformContentView()
 		}
 	}
 }

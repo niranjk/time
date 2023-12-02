@@ -28,6 +28,7 @@ object  Versions {
     const val kotlinxDateTime = "0.4.0"
     const val junit5 = "1.5.10"
     const val coroutines = "1.7.3"
+    const val nav_version = "2.4.0"
 
 }
 
@@ -42,6 +43,7 @@ object Deps{
         const val foundation = ("androidx.compose.foundation:foundation:${Versions.compose_version}")
         const val material = ("androidx.compose.material:material:${Versions.compose_version}")
         const val activity = ("androidx.activity:activity-compose:${Versions.compose_activity_version}")
+        const val navigation = ("androidx.navigation:navigation-compose:${Versions.nav_version}")
     }
 
     // Coroutines

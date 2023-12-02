@@ -51,5 +51,6 @@ dependencies {
         implementation(foundation)
         implementation(material)
         implementation(activity)
+        implementation(navigation)
     }
 }

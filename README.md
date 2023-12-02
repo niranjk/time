@@ -484,6 +484,58 @@ throughout your SwiftUI app.
 
 
 
+# How do you connect to Platform Specific API in KMM ??
+- with Examples I am gonna explain you how you structure your code 
+according to KMP's suggested approach to handle Platform Specific APIs 
+- how we reuse code between platforms ?? 
+
+- expect / actual mechanism 
+
+- expect : think as Interface in Android & protocol in Swift 
+
+
+- define classes, properties and function/methods using expect 
+- actual implementation in each platform 
+
+
+
+ # Regular Framework vs Cocoapods for iOS Framework distribution management 
+
+- Compose Navigation added 
+[https://developer.android.com/jetpack/compose/navigation]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
