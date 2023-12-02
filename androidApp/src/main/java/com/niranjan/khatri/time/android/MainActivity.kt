@@ -3,23 +3,25 @@ package com.niranjan.khatri.time.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.niranjan.khatri.time.android.theme.TimeAppTheme
-import com.niranjan.khatri.time.android.theme.lightGrey
-import com.niranjan.khatri.time.android.theme.primaryDarkColor
-import com.niranjan.khatri.time.android.theme.primaryLightColor
-import com.niranjan.khatri.time.android.theme.secondaryDarkColor
-import com.niranjan.khatri.time.android.theme.secondaryLightColor
+import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.niranjan.khatri.time.android.ui.MainView
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
@@ -29,7 +31,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         Napier.base(DebugAntilog())
         setContent {
-            /*
+
             MainView {
                 TopAppBar(
                     title = {
@@ -40,7 +42,26 @@ class MainActivity : ComponentActivity() {
                     }
                 )
             }
-             */
+
+            // A surface container using the 'background' color from the theme
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colors.background
+            ) {
+                // Set up navigation
+                val navController = rememberNavController()
+                NavHost(navController = navController, startDestination = "homeScreen") {
+                    composable("homeScreen") { HomeScreen(navController) }
+                    composable(
+                        "deepLinkScreen/{contentId}",
+                        arguments = listOf(navArgument("contentId") { type = NavType.StringType })
+                    ) { entry ->
+                        val contentId = entry.arguments?.getString("contentId")
+                        DeepLinkScreen(contentId ?: "")
+                    }
+                }
+            }
+            /*
             TimeAppTheme {
                 Scaffold {
                     Box(modifier = Modifier.padding(it)){
@@ -48,7 +69,35 @@ class MainActivity : ComponentActivity() {
                     }
                 }
             }
+             */
         }
+
+    }
+}
+@Composable
+fun HomeScreen(navController: NavController) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Text(text = "Home Screen")
+
+        // Navigate to DeepLinkScreen when the button is clicked
+        Button(onClick = { navController.navigate("deepLinkScreen/123") }) {
+            Text(text = "Go to Deep Link Screen")
+        }
+    }
+}
+
+@Composable
+fun DeepLinkScreen(contentId: String) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Text(text = "Deep Link Screen\nContent ID: $contentId")
     }
 }
 
