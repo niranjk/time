@@ -6,13 +6,14 @@ plugins {
     id("com.chromaticnoise.multiplatform-swiftpackage-m1-support")
 }
 
+// this function configures your generated Swift package
 multiplatformSwiftPackage {
-    xcframeworkName("OpenLink")
-    swiftToolsVersion("5.3")
+    xcframeworkName("OpenLink") // you can define your name for the generated framework otherwise it takes default name from module
+    swiftToolsVersion("5.3") // swift tool version required by the generated package
     targetPlatforms {
-        iOS { v("13") }
+        iOS { v("13") } // defines the platform + OS version the framework support
     }
-    outputDirectory(File(projectDir, "openlink"))
+    outputDirectory(File(projectDir, "openlink")) // define the name and location of output folder of the swift package
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)

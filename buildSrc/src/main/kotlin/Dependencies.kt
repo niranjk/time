@@ -16,7 +16,7 @@ object  Versions {
     const val compile_sdk = 33
 
     // 2 Plugins
-    const val compose_compiler_version = "1.4.7"
+    const val compose_compiler_version = "1.5.3"
     const val compose_version = "1.4.3"
     const val compose_activity_version = "1.7.1"
     const val desktop_compose_plugin = "1.0.1"

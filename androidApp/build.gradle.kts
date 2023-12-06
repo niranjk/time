@@ -40,6 +40,7 @@ android {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(mapOf("path" to ":open-link")))
     with(Deps){
         implementation(Deps.napier)
     }
