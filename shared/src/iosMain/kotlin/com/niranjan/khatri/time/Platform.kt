@@ -1,5 +1,6 @@
 package com.niranjan.khatri.time
 
+import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.alloc
 import kotlinx.cinterop.memScoped
 import kotlinx.cinterop.ptr
@@ -24,6 +25,7 @@ actual class Platform actual constructor(){
     }
     actual val operatingSystemVersion = UIDevice.currentDevice.systemVersion
     actual val cpuType: String = kotlin.native.Platform.cpuArchitecture.name
+    @OptIn(ExperimentalForeignApi::class)
     actual val deviceModel: String
         get(){
             memScoped {
@@ -45,7 +47,9 @@ actual class Platform actual constructor(){
 
 actual class ScreenInfo actual constructor(){
 
+    @OptIn(ExperimentalForeignApi::class)
     actual val width: Int = CGRectGetWidth(UIScreen.mainScreen.nativeBounds).toInt()
+    @OptIn(ExperimentalForeignApi::class)
     actual val height: Int = CGRectGetHeight(UIScreen.mainScreen.nativeBounds).toInt()
     actual val density: Int = UIScreen.mainScreen.scale.toInt()
 

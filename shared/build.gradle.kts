@@ -40,6 +40,7 @@ kotlin {
                 //put your multiplatform dependencies here
                 implementation(Deps.JetBrains.datetime)
                 implementation(Deps.napier)
+                implementation(project(":open-link"))
             }
         }
         val commonTest by getting {

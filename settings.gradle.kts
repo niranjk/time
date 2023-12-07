@@ -16,3 +16,5 @@ dependencyResolutionManagement {
 rootProject.name = "Time"
 include(":androidApp")
 include(":shared")
+include(":open-link")
+includeBuild("plugins/multiplatform-swiftpackage-m1_support")
