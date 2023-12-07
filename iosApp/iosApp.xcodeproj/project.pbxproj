@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		B12BE9FF2AA481CD00DC2E4D /* PlatformContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BE9FE2AA481CD00DC2E4D /* PlatformContentView.swift */; };
 		B163C79C2A8D106000CA1B26 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163C79B2A8D106000CA1B26 /* Tutorial.swift */; };
+		B1A9DBD72B21BF4900C1D418 /* OpenLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9DBD62B21BF4900C1D418 /* OpenLinkView.swift */; };
+		B1A9DBD92B21C9A100C1D418 /* OpenLink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A9DBD82B21C9A100C1D418 /* OpenLink.xcframework */; };
+		B1A9DBDA2B21C9A100C1D418 /* OpenLink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1A9DBD82B21C9A100C1D418 /* OpenLink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1E66A8B2A8A795300EA5CA2 /* TimezoneItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E66A8A2A8A795300EA5CA2 /* TimezoneItems.swift */; };
 		B1E66A8F2A8A7B2F00EA5CA2 /* TimezoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E66A8E2A8A7B2F00EA5CA2 /* TimezoneView.swift */; };
 		B1E66A912A8A7BF400EA5CA2 /* TimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E66A902A8A7BF400EA5CA2 /* TimeCard.swift */; };
@@ -25,6 +28,20 @@
 		D1B6ADE107A4990FEFA05B4C /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050D334BC1C1CD97A214521E /* Pods_iosApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B1A9DBDB2B21C9A100C1D418 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1A9DBDA2B21C9A100C1D418 /* OpenLink.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		050D334BC1C1CD97A214521E /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +53,8 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B12BE9FE2AA481CD00DC2E4D /* PlatformContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformContentView.swift; sourceTree = "<group>"; };
 		B163C79B2A8D106000CA1B26 /* Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		B1A9DBD62B21BF4900C1D418 /* OpenLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLinkView.swift; sourceTree = "<group>"; };
+		B1A9DBD82B21C9A100C1D418 /* OpenLink.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OpenLink.xcframework; path = "../open-link/openlink/OpenLink.xcframework"; sourceTree = "<group>"; };
 		B1E66A8A2A8A795300EA5CA2 /* TimezoneItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneItems.swift; sourceTree = "<group>"; };
 		B1E66A8E2A8A7B2F00EA5CA2 /* TimezoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneView.swift; sourceTree = "<group>"; };
 		B1E66A902A8A7BF400EA5CA2 /* TimeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCard.swift; sourceTree = "<group>"; };
@@ -54,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B6ADE107A4990FEFA05B4C /* Pods_iosApp.framework in Frameworks */,
+				B1A9DBD92B21C9A100C1D418 /* OpenLink.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +100,7 @@
 		3B61DA87A368B4B641362C23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1A9DBD82B21C9A100C1D418 /* OpenLink.xcframework */,
 				050D334BC1C1CD97A214521E /* Pods_iosApp.framework */,
 			);
 			name = Frameworks;
@@ -108,6 +129,7 @@
 			children = (
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
+				B1A9DBD62B21BF4900C1D418 /* OpenLinkView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* TimeApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
@@ -138,6 +160,7 @@
 				7555FF79242A565900829871 /* Resources */,
 				E6855FEC977150A8F21A1D0C /* Frameworks */,
 				D52BD7D96FE4867903710C8F /* [CP] Embed Pods Frameworks */,
+				B1A9DBDB2B21C9A100C1D418 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +265,7 @@
 			files = (
 				B1E66A8B2A8A795300EA5CA2 /* TimezoneItems.swift in Sources */,
 				B163C79C2A8D106000CA1B26 /* Tutorial.swift in Sources */,
+				B1A9DBD72B21BF4900C1D418 /* OpenLinkView.swift in Sources */,
 				B12BE9FF2AA481CD00DC2E4D /* PlatformContentView.swift in Sources */,
 				B1FB0B6A2A8AA6C4003AC49A /* FindMeeting.swift in Sources */,
 				2152FB042600AC8F00CF470E /* TimeApp.swift in Sources */,

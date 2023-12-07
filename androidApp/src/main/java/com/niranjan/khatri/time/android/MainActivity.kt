@@ -92,7 +92,7 @@ fun deepLinkApp(){
 
 @Composable
 fun openLinkApp(openEntry: (String)-> Unit ){
-    TimeAppTheme {
+    TimeAppTheme(true) {
         OpenLinkApp{
             openEntry(it)
         }

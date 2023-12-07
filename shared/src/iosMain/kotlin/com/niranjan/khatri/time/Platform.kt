@@ -42,7 +42,6 @@ actual class Platform actual constructor(){
                     "${screenInfo?.width}x${screenInfo?.height}x${screenInfo?.density})"
         )
     }
-
 }
 
 actual class ScreenInfo actual constructor(){

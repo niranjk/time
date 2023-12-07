@@ -8,6 +8,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.niranjan.khatri.time.android.theme.primaryColor
+import com.niranjan.khatri.time.android.theme.primaryLightColor
+import com.niranjan.khatri.time.android.theme.primaryTextColor
 
 @Composable
 fun OpenLinkApp( openEntry: (String)-> Unit) {
@@ -16,8 +19,8 @@ fun OpenLinkApp( openEntry: (String)-> Unit) {
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        Text(text = "Home Screen")
-        // Navigate to DeepLinkScreen when the button is clicked
+        Text(text = "Home Screen", color = primaryColor)
+        // Navigate to Url when the button is clicked
         Button(onClick = {
             openEntry("http://www.google.com") // enter the valid url
         }) {
