@@ -40,12 +40,12 @@ kotlin {
                 //put your multiplatform dependencies here
                 implementation(Deps.JetBrains.datetime)
                 implementation(Deps.napier)
-                implementation(project(":open-link")) // add this to include the library
+                // implementation(project(":open-link")) // remove this
+                implementation("com.niranjan.khatri.shared:open-link:1.0") // add this
             }
         }
         val commonTest by getting {
             dependencies {
-                implementation(kotlin("test"))
             }
         }
     }

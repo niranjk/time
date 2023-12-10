@@ -4,7 +4,10 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("com.chromaticnoise.multiplatform-swiftpackage-m1-support")
+    id("maven-publish")
 }
+version = "1.0"
+group = "com.niranjan.khatri.shared"
 
 // this function configures your generated Swift package
 multiplatformSwiftPackage {
@@ -28,7 +31,7 @@ kotlin {
         }
         publishLibraryVariants("release", "debug")
     }
-    
+
     val xcf = XCFramework("OpenLink")
     listOf(
         iosX64(),
@@ -64,5 +67,11 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+    }
+}
+
+publishing {
+    repositories {
+        mavenLocal()
     }
 }

@@ -12,8 +12,8 @@ const val cocoapods = "native.cocoapods"
 object  Versions {
     // 1
     const val min_sdk = 24
-    const val target_sdk = 33
-    const val compile_sdk = 33
+    const val target_sdk = 34
+    const val compile_sdk = 34
 
     // 2 Plugins
     const val compose_compiler_version = "1.5.3"
