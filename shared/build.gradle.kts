@@ -40,8 +40,8 @@ kotlin {
                 //put your multiplatform dependencies here
                 implementation(Deps.JetBrains.datetime)
                 implementation(Deps.napier)
-                // implementation(project(":open-link")) // remove this
-                implementation("com.niranjan.khatri.shared:open-link:1.0") // add this
+                implementation(project(":open-link")) // add this for publishing to maven central
+                // implementation("com.niranjan.khatri.shared:open-link:1.0") // add this for maven local
             }
         }
         val commonTest by getting {

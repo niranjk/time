@@ -14,6 +14,12 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        mavenLocal()
+        maven {
+            url = uri("https://maven.pkg.github.com/niranjk/time/open-link")
+            credentials(PasswordCredentials::class)
+            authentication {
+                create<BasicAuthentication>("basic")
+            }
+        }
     }
 }

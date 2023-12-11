@@ -19,11 +19,23 @@ multiplatformSwiftPackage {
     outputDirectory(File(projectDir, "openlink")) // define the name and location of output folder of the swift package
 }
 
+publishing {
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/niranjk/time/open-link")
+            credentials(PasswordCredentials::class)
+            authentication {
+                create<BasicAuthentication>("basic")
+            }
+        }
+    }
+}
+
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
     targetHierarchy.default()
 
-    android {
+    androidTarget {
         compilations.all {
             kotlinOptions {
                 jvmTarget = JavaVersion.VERSION_17.toString()
@@ -67,11 +79,5 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-}
-
-publishing {
-    repositories {
-        mavenLocal()
     }
 }

@@ -40,8 +40,8 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    // implementation(project(mapOf("path" to ":open-link"))) // remove this
-    implementation("com.niranjan.khatri.shared:open-link:1.0") // add this dependencies from mavenLocal
+    implementation(project(mapOf("path" to ":open-link"))) // add this to publish your library
+    // implementation("com.niranjan.khatri.shared:open-link:1.0") // add this dependencies from mavenLocal
     with(Deps){
         implementation(Deps.napier)
     }

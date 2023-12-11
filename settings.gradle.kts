@@ -3,6 +3,7 @@ pluginManagement {
         google()
         gradlePluginPortal()
         mavenCentral()
+        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
     }
 }
 
@@ -16,5 +17,5 @@ dependencyResolutionManagement {
 rootProject.name = "Time"
 include(":androidApp")
 include(":shared")
-// include(":open-link")  // remove this
-// includeBuild("plugins/multiplatform-swiftpackage-m1_support") // remove this
+include(":open-link")  // remove this : add only when publishing again
+includeBuild("plugins/multiplatform-swiftpackage-m1_support") // remove this

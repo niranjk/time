@@ -1,0 +1,8 @@
+framework module OpenLink {
+    umbrella header "OpenLink.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}
