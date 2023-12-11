@@ -14,8 +14,9 @@ dependencyResolutionManagement {
     }
 }
 
+
 rootProject.name = "Time"
 include(":androidApp")
 include(":shared")
-include(":open-link")  // remove this : add only when publishing again
+// include(":open-link")  // remove this : add only when publishing again
 includeBuild("plugins/multiplatform-swiftpackage-m1_support") // remove this

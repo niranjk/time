@@ -15,11 +15,14 @@ allprojects {
         google()
         mavenCentral()
         maven {
+            name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/niranjk/time/open-link")
+            /*
             credentials(PasswordCredentials::class)
             authentication {
                 create<BasicAuthentication>("basic")
             }
+             */
         }
     }
 }
