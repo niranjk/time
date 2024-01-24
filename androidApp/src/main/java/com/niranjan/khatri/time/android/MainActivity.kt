@@ -24,8 +24,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.niranjan.khatri.open_link.Linker.openLink
-import com.niranjan.khatri.open_link.activityContext
 import com.niranjan.khatri.time.android.theme.TimeAppTheme
 import com.niranjan.khatri.time.android.ui.MainView
 import io.github.aakira.napier.DebugAntilog
@@ -36,13 +34,19 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         Napier.base(DebugAntilog())
         setContent {
-            openLinkApp{openEntry(it)}
+            // Note* Uncomment for OpenLinkApp Test
+            // openLinkApp{openEntry(it)}
         }
     }
+
+    /*
+
+    // Note* Uncomment for OpenLinkApp Test
     private fun openEntry(url: String){
         activityContext = this
         openLink(url)
     }
+     */
 }
 
 

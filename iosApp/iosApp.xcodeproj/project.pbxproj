@@ -23,8 +23,24 @@
 		B1FB0B662A8AA559003AC49A /* Searchbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB0B652A8AA559003AC49A /* Searchbar.swift */; };
 		B1FB0B682A8AA636003AC49A /* HourSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB0B672A8AA636003AC49A /* HourSheet.swift */; };
 		B1FB0B6A2A8AA6C4003AC49A /* FindMeeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB0B692A8AA6C4003AC49A /* FindMeeting.swift */; };
+		B1FBA89C2B2920E900EFAB83 /* OpenLink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A9DBD82B21C9A100C1D418 /* OpenLink.xcframework */; };
+		B1FBA89D2B2920E900EFAB83 /* OpenLink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1A9DBD82B21C9A100C1D418 /* OpenLink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1B6ADE107A4990FEFA05B4C /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050D334BC1C1CD97A214521E /* Pods_iosApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B1FBA89E2B2920E900EFAB83 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1FBA89D2B2920E900EFAB83 /* OpenLink.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		050D334BC1C1CD97A214521E /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B6ADE107A4990FEFA05B4C /* Pods_iosApp.framework in Frameworks */,
+				B1FBA89C2B2920E900EFAB83 /* OpenLink.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +160,7 @@
 				7555FF79242A565900829871 /* Resources */,
 				E6855FEC977150A8F21A1D0C /* Frameworks */,
 				D52BD7D96FE4867903710C8F /* [CP] Embed Pods Frameworks */,
+				B1FBA89E2B2920E900EFAB83 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 7555FF72242A565900829871;
+			packageReferences = (
+				B1FBA89B2B29180800EFAB83 /* XCRemoteSwiftPackageReference "time" */,
+			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -443,6 +464,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1FBA89B2B29180800EFAB83 /* XCRemoteSwiftPackageReference "time" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/niranjk/time";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 7555FF73242A565900829871 /* Project object */;
 }

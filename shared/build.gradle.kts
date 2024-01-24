@@ -42,7 +42,8 @@ kotlin {
                 implementation(Deps.napier)
                 // implementation(project(":open-link")) // add this for publishing to maven central
                 // implementation("com.niranjan.khatri.shared:open-link:1.0") // add this for maven local
-                implementation("com.niranjan.khatri.shared:open-link:1.0") // add this dependencies from github packages
+                // Note* Uncomment for OpenLinkApp Test
+                // implementation("com.niranjan.khatri.shared:open-link:1.0") // add this dependencies from github packages
             }
         }
         val commonTest by getting {
